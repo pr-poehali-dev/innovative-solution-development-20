@@ -1,4 +1,4 @@
-import { Code, Layers, Palette, Sparkles, Zap, Shield } from "lucide-react"
+import { Table, FileSpreadsheet, Sparkles, Zap, Shield, Save } from "lucide-react"
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { ScrollReveal } from "@/components/scroll-reveal"
@@ -11,44 +11,44 @@ import { ProgressCard } from "@/components/ui-library/cards/progress-card"
 export function FeaturesSection() {
   const features = [
     {
-      icon: <Layers className="h-10 w-10 text-red-500" />,
-      title: "Модульные компоненты",
-      description: "Собирайте сложные интерфейсы из переиспользуемых компонентов.",
+      icon: <Table className="h-10 w-10 text-red-500" />,
+      title: "Удобный редактор таблиц",
+      description: "Заполняйте адреса, типы и описания регистров прямо в браузере.",
       progress: 100,
       borderClass: "border-glow-red",
     },
     {
-      icon: <Palette className="h-10 w-10 text-blue-500" />,
-      title: "Гибкие темы",
-      description: "Легко настраивайте цвета, шрифты и стили под ваш бренд.",
-      progress: 90,
-      borderClass: "border-glow-blue",
-    },
-    {
-      icon: <Zap className="h-10 w-10 text-yellow-500" />,
-      title: "Высокая скорость",
-      description: "Легковесные компоненты для быстрой загрузки и работы.",
-      progress: 95,
-      borderClass: "border-glow-yellow",
-    },
-    {
-      icon: <Code className="h-10 w-10 text-green-500" />,
-      title: "TypeScript из коробки",
-      description: "Полная типизация для лучшего DX и меньше багов.",
+      icon: <FileSpreadsheet className="h-10 w-10 text-green-500" />,
+      title: "Экспорт в Excel",
+      description: "Один клик — и готовый .xlsx файл со структурой и форматированием.",
       progress: 100,
       borderClass: "border-glow-green",
     },
     {
-      icon: <Sparkles className="h-10 w-10 text-purple-500" />,
-      title: "Анимации",
-      description: "Красивые анимации и переходы на базе Framer Motion.",
+      icon: <Zap className="h-10 w-10 text-yellow-500" />,
+      title: "Все типы регистров",
+      description: "Holding, Input, Coil и Discrete Input — поддержка из коробки.",
+      progress: 95,
+      borderClass: "border-glow-yellow",
+    },
+    {
+      icon: <Sparkles className="h-10 w-10 text-blue-500" />,
+      title: "Автоматизация",
+      description: "Автонумерация адресов, проверка диапазонов и форматов данных.",
+      progress: 90,
+      borderClass: "border-glow-blue",
+    },
+    {
+      icon: <Save className="h-10 w-10 text-purple-500" />,
+      title: "Шаблоны проектов",
+      description: "Сохраняйте карты регистров и переиспользуйте их в новых проектах.",
       progress: 85,
       borderClass: "border-glow-purple",
     },
     {
       icon: <Shield className="h-10 w-10 text-orange-500" />,
-      title: "Доступность",
-      description: "Компоненты соответствуют стандартам WCAG для всех пользователей.",
+      title: "Без ошибок",
+      description: "Валидация данных исключает дубли адресов и неверные типы.",
       progress: 92,
       borderClass: "border-glow-orange",
     },
@@ -63,13 +63,13 @@ export function FeaturesSection() {
           <div className="flex flex-col items-center justify-center space-y-6 text-center mb-12">
             <div className="space-y-4">
               <AnimatedText
-                text="Возможности для современной веб-разработки"
+                text="Всё для работы с регистрами Modbus"
                 variant="heading"
                 className="text-3xl font-heading font-bold tracking-tighter sm:text-5xl gradient-text"
                 animation="slide"
               />
               <AnimatedText
-                text="Наша библиотека содержит все необходимое для создания красивых, интерактивных и доступных веб-приложений."
+                text="Создавайте карты регистров, проверяйте данные и выгружайте готовые Excel-файлы без рутины и ошибок."
                 variant="paragraph"
                 className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400 opacity-70"
                 animation="fade"
