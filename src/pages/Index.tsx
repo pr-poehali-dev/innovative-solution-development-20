@@ -4,7 +4,7 @@ import { SiteFooter } from "@/components/site-footer"
 import { PageTransition } from "@/components/page-transition"
 import { HeroSection } from "@/components/sections/hero-section"
 import { FeaturesSection } from "@/components/sections/features-section"
-import { ComponentLibraryShowcase } from "@/components/sections/component-library-showcase"
+import { ModbusTableEditor } from "@/components/sections/modbus-table-editor"
 import { TestimonialsSection } from "@/components/sections/testimonials-section"
 import { PricingSection } from "@/components/sections/pricing-section"
 import { BlogSection } from "@/components/sections/blog-section"
@@ -33,7 +33,7 @@ const Index = () => {
 
             <HeroSection />
             <FeaturesSection />
-            <ComponentLibraryShowcase />
+            <ModbusTableEditor />
             <TestimonialsSection />
             <PricingSection />
             <BlogSection />
