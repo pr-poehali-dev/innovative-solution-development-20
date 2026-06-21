@@ -1,17 +1,50 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { ThemeProvider } from "@/components/theme-provider"
+import { SiteHeader } from "@/components/site-header"
+import { SiteFooter } from "@/components/site-footer"
+import { PageTransition } from "@/components/page-transition"
+import { HeroSection } from "@/components/sections/hero-section"
+import { FeaturesSection } from "@/components/sections/features-section"
+import { ComponentLibraryShowcase } from "@/components/sections/component-library-showcase"
+import { TestimonialsSection } from "@/components/sections/testimonials-section"
+import { PricingSection } from "@/components/sections/pricing-section"
+import { BlogSection } from "@/components/sections/blog-section"
+import { FaqSection } from "@/components/sections/faq-section"
+import { CtaSection } from "@/components/sections/cta-section"
+import { MouseGlow } from "@/components/ui-library/effects/mouse-glow"
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4 color-black text-black">Добро пожаловать!</h1>
-        <p className="text-xl text-gray-600">тут будет отображаться ваш проект</p>
-      </div>
-      <span className="absolute bottom-8 left-1/2 -translate-x-1/2 inline-block bg-[#FF6637] text-white text-sm px-4 py-2 rounded-full whitespace-nowrap">
-        Подождите 5 минут, Юра создает первую версию проекта с нуля
-      </span>
-    </div>
-  );
-};
+    <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
+      <div className="relative flex min-h-screen flex-col">
+        <SiteHeader />
+        <PageTransition>
+          <main className="flex-1 flex flex-col items-center relative">
+            {/* Enhanced global cursor effect with subtle red glow */}
+            <MouseGlow
+              color="rgba(220, 38, 38, 0.12)"
+              size={600}
+              blur={150}
+              opacity={0.6}
+              followSpeed={0.05}
+              pulseEffect={true}
+              pulseSpeed={4}
+              pulseScale={1.05}
+            />
 
-export default Index;
+            <HeroSection />
+            <FeaturesSection />
+            <ComponentLibraryShowcase />
+            <TestimonialsSection />
+            <PricingSection />
+            <BlogSection />
+            <FaqSection />
+            <CtaSection />
+          </main>
+        </PageTransition>
+        <SiteFooter />
+      </div>
+    </ThemeProvider>
+  )
+}
+
+export default Index
